@@ -1,18 +1,18 @@
 class Vehiculo {
-   constructor(marca, modelo, placa) {
+   constructor(marca, modelo, año) {
         this.marca=marca;
         this.modelo=modelo;
-        this.placa=placa;
+        this.año=año;
         this.detalles=false
     };
     ObtenerDetalles(){
         this.detalles = true
-        console.log(`los detalles de vehucolo son: marca ${this.marca} el modelo es: ${this.modelo} y la placa es ${this.placa}`);
+        console.log(`los detalles de vehucolo son: marca ${this.marca} el modelo es: ${this.modelo} y su año de salida es ${this.año}`);
     }
 }
 class carro extends Vehiculo {
-        constructor(marca, modelo, placa, Npuertas) {
-            super(marca,modelo,placa)
+        constructor(marca, modelo, año, Npuertas) {
+            super(marca,modelo,año)
             this.Npuertas=Npuertas
         }
         ObtenerDetalles(){
@@ -22,8 +22,8 @@ class carro extends Vehiculo {
     }
 
 class moto extends Vehiculo {
-        constructor(marca, modelo, placa, cilindraje) {
-            super(marca,modelo,placa)
+        constructor(marca, modelo, año, cilindraje) {
+            super(marca,modelo,año)
             this.cilindraje=cilindraje
         }
         ObtenerDetalles(){
@@ -32,7 +32,7 @@ class moto extends Vehiculo {
             
         }
     }
-let auto= new carro("Ferrari","XM8","Dkl415", "2" )
+let auto= new carro("Ferrari","XM8","2009", "2" )
  auto.ObtenerDetalles()
- let Mbike= new moto("Yamaha","YZF-R3","xYz789", "180" )
+ let Mbike= new moto("Yamaha","YZF-R3","2025", "180" )
  Mbike.ObtenerDetalles()
